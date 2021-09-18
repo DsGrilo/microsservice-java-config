@@ -1,0 +1,16 @@
+
+# Define a Porta do Service Discovery
+server: 
+  port: 9000
+  
+# Configurações do eureka 
+eureka:
+  instace:
+    hostname: localhost # hostname do eureka
+  client:
+    registerWithEureka: true #Informa que o service discovery tbm se registrará no eureka
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${serve.port}/eureka/
+   server:
+     wait-time-in-ms-when-sync-empty: 3000 # Tempo em ms que o servidor vai aguardar para se conectar
