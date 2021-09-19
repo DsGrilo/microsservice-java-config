@@ -8,7 +8,8 @@ eureka:
   instace:
     hostname: localhost # hostname do eureka
   client:
-    registerWithEureka: true #Informa que o service discovery tbm se registrará no eureka
+    #Informa que o service discovery tbm se registrará no eureka
+    registerWithEureka: true
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${serve.port}/eureka/
