@@ -1,14 +1,11 @@
 
-# Define a Porta do Service Discovery
 server: 
   port: 9000
-  
-# Configurações do eureka 
 eureka:
   instace:
-    hostname: localhost # hostname do eureka
+    hostname: localhost
+    port: 9000
   client:
-    #Informa que o service discovery tbm se registrará no eureka
     registerWithEureka: true
     fetchRegistry: false
     serviceUrl:
