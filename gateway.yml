@@ -23,10 +23,10 @@ spring:
           lowe-car-service-id: true
       routes:
         - id: product-catalog
-          uri: http://localhost:8082
+          uri: lb://PRODUCT-CATALOG
           predicates:
             - Path=/api/v1/product/*
-        - id: product-catalog
-          uri: http://localhost:8081
+        - id: shopping-cart
+          uri: lb://SHOPPING-CART
           predicates:
             - Path=/api/v1/cart/*
